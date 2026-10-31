@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="Desktop Dance Mascot is a personal Windows desktop companion project featuring a 2D animated character and planned music-aware dancing. Created by L3on4ik." />
+  <title>Desktop Dance Mascot — by L3on4ik</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#151d33; --text:#f4f6ff; --muted:#aab5d0; --line:#2e3a59; --accent:#a78bfa; --cyan:#67e8f9; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; min-height:100vh; background:radial-gradient(ellipse 70% 42% at 55% 6%,#2a2254 0%,transparent 76%),radial-gradient(ellipse 50% 40% at 5% 70%,#0c3449 0%,transparent 70%),var(--bg); color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.6; }
+    a { color:var(--cyan); text-underline-offset:3px; }
+    a:focus-visible { outline:2px solid var(--cyan); outline-offset:4px; border-radius:3px; }
+    .wrap { width:min(1040px,calc(100% - 40px)); margin:auto; }
+    header { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:28px 0; }
+    .brand { display:flex; align-items:center; gap:12px; font-size:17px; font-weight:750; letter-spacing:-.02em; }
+    .mark { width:42px; height:42px; display:grid; place-items:center; border:1px solid #6b5ba6; border-radius:14px; background:#2b244b; font-size:23px; }
+    .top-link { color:var(--muted); text-decoration:none; font-size:14px; }
+    .top-link:hover { color:var(--text); }
+    main { padding:80px 0 80px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; padding:6px 12px; border:1px solid #55477b; border-radius:999px; background:#231d3a; color:#d6c8ff; font-size:13px; font-weight:650; }
+    .dot { background:#89e6c3; height:7px; width:7px; border-radius:50%; }
+    h1 { font-size:clamp(43px,7vw,78px); line-height:1.04; max-width:840px; letter-spacing:-.065em; margin:25px 0 24px; }
+    h1 span { color:var(--accent); }
+    .intro { color:#c5cce0; max-width:630px; font-size:clamp(17px,2.3vw,20px); margin:0 0 32px; }
+    .buttons { display:flex; flex-wrap:wrap; gap:12px; }
+    .button { padding:13px 20px; border-radius:12px; text-decoration:none; font-weight:700; font-size:14px; border:1px solid var(--line); color:var(--text); background:#1c2741; }
+    .button.primary { color:#130e24; border-color:#c4b5fd; background:linear-gradient(120deg,#c4b5fd,#90eaf6); }
+    .button:hover { filter:brightness(1.12); }
+    .section-title { font-size:26px; letter-spacing:-.035em; margin:0 0 10px; }
+    .section-note { color:var(--muted); margin:0 0 25px; }
+    .features { margin-top:90px; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .card { padding:25px; border:1px solid var(--line); border-radius:20px; background:linear-gradient(150deg,#1a2340,#121a2e); }
+    .symbol { font-size:27px; margin-bottom:14px; }
+    .card h3 { font-size:17px; margin:0 0 9px; }
+    .card p { font-size:14px; color:var(--muted); margin:0; }
+    .service { margin-top:75px; padding:28px 30px; border:1px solid #465373; border-radius:20px; background:linear-gradient(110deg,#202646,#10253a); display:flex; align-items:center; justify-content:space-between; gap:25px; }
+    .service h2 { margin:0 0 8px; font-size:23px; letter-spacing:-.03em; }
+    .service p { max-width:660px; margin:0; color:#c1cbe2; font-size:15px; }
+    .service a { white-space:nowrap; font-weight:750; }
+    footer { border-top:1px solid var(--line); padding:24px 0 35px; display:flex; justify-content:space-between; gap:12px; color:var(--muted); font-size:13px; }
+    @media(max-width:700px){header{padding:20px 0;} main{padding:50px 0 65px;} .grid{grid-template-columns:1fr;} .features{margin-top:65px;} .service{margin-top:50px; align-items:flex-start; flex-direction:column; padding:24px;} footer{flex-direction:column;} }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><div class="mark" aria-hidden="true">♫</div> Desktop Dance Mascot</div>
+      <a class="top-link" href="#about">About the project</a>
+    </header>
+
+    <main>
+      <section aria-labelledby="hero-title">
+        <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Independent Windows project · In development</div>
+        <h1 id="hero-title">A little character.<br /><span>A lot of rhythm.</span></h1>
+        <p class="intro">Desktop Dance Mascot brings a 2D animated companion to your Windows desktop. The project is exploring music-aware movement, customizable dance animations, and smooth transitions between dances.</p>
+        <div class="buttons">
+          <a class="button primary" href="#about">Explore the project</a>
+          <a class="button" href="#music-data">Music data &amp; credits</a>
+        </div>
+      </section>
+
+      <section class="features" id="about" aria-labelledby="features-title">
+        <h2 class="section-title" id="features-title">What we're building</h2>
+        <p class="section-note">A lightweight desktop companion designed around animation and rhythm.</p>
+        <div class="grid">
+          <article class="card">
+            <div class="symbol" aria-hidden="true">✦</div>
+            <h3>2D desktop character</h3>
+            <p>A transparent, movable animated character that stays on your desktop while you work or listen to music.</p>
+          </article>
+          <article class="card">
+            <div class="symbol" aria-hidden="true">♫</div>
+            <h3>Dance animation library</h3>
+            <p>Multiple animated dance loops with rhythm annotations, with more dances and transition clips planned.</p>
+          </article>
+          <article class="card">
+            <div class="symbol" aria-hidden="true">◷</div>
+            <h3>Music-aware dancing</h3>
+            <p>Planned BPM-based synchronization using track metadata, playback position, and optional timing calibration.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="service" id="music-data" aria-labelledby="music-data-title">
+        <div>
+          <h2 id="music-data-title">Music data &amp; attribution</h2>
+          <p>Desktop Dance Mascot is exploring third-party track metadata and tempo (BPM) lookup to support music-aware animations. GetSongBPM is a prospective music metadata provider. This independent project is not affiliated with or endorsed by GetSongBPM.</p>
+        </div>
+        <a href="https://getsongbpm.com/" target="_blank" rel="noopener noreferrer">Visit GetSongBPM ↗</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Desktop Dance Mascot · Created by <strong>L3on4ik</strong></span>
+      <span>Personal project · Windows · In development</span>
+    </footer>
+  </div>
+</body>
+</html>
